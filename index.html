@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBindle - Stay Connected</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="content">
+      <img src="logo.svg" alt="MyBindle Logo" class="logo" />
+      <h1>
+        Stay Connected <br />
+        Stay Social <br />
+        <span>Stay You!</span>
+      </h1>
+      <p>
+        A place where friendships grow, communities thrive, and moments turn into unforgettable experiences.
+        Whether you're reconnecting with old friends or meeting new people, MyBindle is your space online.
+      </p>
+      <button class="cta">Get Started</button>
+    </div>
+    <div class="phone">
+      <img src="/images/1st.jpg" alt="Phone UI" class="phone-img" />
+      <div class="tag tag-top">🔥 Seamless Connections</div>
+      <div class="tag tag-bottom">🌎 Discover & Explore</div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2 class="features-title">Features That Keep You Hooked!</h2>
+    <p class="features-subtitle">Meet, Chat, Share – Anytime, Anywhere!</p>
+    <div class="features-grid">
+      <div class="feature-card">🔥 <strong>Seamless Connections</strong><br />
+        <span>Stay in touch with friends, family, and like-minded people with just a tap.</span>
+      </div>
+      <div class="feature-card">📝 <strong>Share Your Story</strong><br />
+        <span>Upload photos, videos, and updates to let the world know what’s happening in your life.</span>
+      </div>
+      <div class="feature-card">💬 <strong>Real-Time Chat</strong><br />
+        <span>Instant messaging, DMs, or group chats – connect fast and smooth.</span>
+      </div>
+      <div class="feature-card">🔒 <strong>Privacy First</strong><br />
+        <span>Your data stays yours. We take your privacy seriously with top-level security.</span>
+      </div>
+      <div class="feature-card">🌎 <strong>Discover & Explore</strong><br />
+        <span>Find trending content, explore communities, and follow what you love.</span>
+      </div>
+      <div class="feature-card">💼 <strong>Grow Your Business</strong><br />
+        <span>Promote your brand, connect with customers, and build lasting relationships.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connection Section -->
+  <section class="connection-section">
+    <div class="connection-wrapper">
+      <div class="connection-images">
+        <img src="/images/L1.jpg" alt="Mobile 1" class="phone-img img1" />
+        <img src="/images/L2.jpg" alt="Mobile 2" class="phone-img img2" />
+      </div>
+      <div class="connection-content">
+        <h2 class="connection-title">Where Every Click<br />Sparks a Connection!</h2>
+        <p class="connection-subtext">
+          A small act of kindness today can create a lifetime of impact for someone in need. Give from the heart and change a life!
+        </p>
+        <div class="connection-features">
+          <div class="feature-item">🎥 <strong>Short Videos & Reels</strong><br />
+            <span>Share engaging, bite-sized content that keeps everyone entertained.</span></div>
+          <div class="feature-item">🔔 <strong>Smart Notifications</strong><br />
+            <span>Stay updated on what matters without the noise.</span></div>
+          <div class="feature-item">👥 <strong>Interest-Based Communities</strong><br />
+            <span>Join groups and discussions that match your passion.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".content h1", {
+      y: 50,
+      opacity: 0,
+      duration: 1
+    });
+
+    gsap.from(".content p", {
+      y: 50,
+      opacity: 0,
+      delay: 0.3,
+      duration: 1
+    });
+
+    gsap.from(".cta", {
+      scale: 0.8,
+      opacity: 0,
+      delay: 0.6,
+      duration: 0.6
+    });
+
+    gsap.from(".phone-img", {
+      x: 100,
+      opacity: 0,
+      delay: 0.5,
+      duration: 1
+    });
+
+    gsap.from(".tag", {
+      y: -20,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 1.2
+    });
+
+    gsap.from(".img1", {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".connection-section",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from(".img2", {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".connection-section",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from(".connection-content", {
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: ".connection-content",
+        start: "top 90%"
+      }
+    });
+  </script>
+</body>
+</html>

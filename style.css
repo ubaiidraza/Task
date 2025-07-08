@@ -1,0 +1,289 @@
+/* Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ------------------ HERO SECTION ------------------ */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%;
+  background-color: #ff523b;
+  color: #fff;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.content {
+  flex: 1 1 50%;
+  max-width: 520px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.content h1 span {
+  color: #ffd1cb;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background-color: #fff;
+  color: #ff523b;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #ffd1cb;
+  color: #fff;
+}
+
+.phone {
+  flex: 1 1 40%;
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.phone-img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tag {
+  position: absolute;
+  background: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tag-top {
+  top: 20px;
+  right: 20px;
+}
+
+.tag-bottom {
+  bottom: 20px;
+  left: 20px;
+}
+
+/* ------------------ FEATURES SECTION ------------------ */
+.features-section {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.features-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.feature-card span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ------------------ CONNECTION SECTION ------------------ */
+.connection-section {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.connection-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.connection-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.img1, .img2 {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.img1 {
+  transform: rotate(-10deg);
+  z-index: 2;
+  margin-right: -60px;
+}
+
+.img2 {
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.connection-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.connection-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.connection-subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.connection-features .feature-item {
+  background: #f9f9f9;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.connection-features strong {
+  display: block;
+  margin-top: 5px;
+  color: #222;
+  font-weight: 600;
+}
+
+.connection-features span {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+@media (max-width: 1024px) {
+  .hero, .connection-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .connection-images {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .img1, .img2 {
+    transform: none;
+    margin: 0;
+  }
+
+  .content, .connection-content {
+    max-width: 90%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .connection-features {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-img {
+    width: 90%;
+  }
+
+  .img1, .img2 {
+    width: 140px;
+  }
+
+  .cta {
+    width: 100%;
+  }
+
+  .connection-title {
+    font-size: 1.6rem;
+  }
+}
