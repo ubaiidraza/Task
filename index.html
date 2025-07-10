@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyBindle - Stay Connected</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -65,48 +70,48 @@
     </div>
   </div>
 </section>
-<section class="connection-section">
-  <div class="connection-left">
-    <div class="circle-bg"></div>
-    <img src="images/L1.jpg" alt="Phone UI 1" class="phone phone-one">
-    <img src="images/L2.jpg" alt="Phone UI 2" class="phone phone-two">
-  </div>
+  <!-- Connection Feature Section -->
+  <section class="connection-section">
+    <div class="connection-left">
+      <div class="circle-bg"></div>
+      <img src="images/L1.jpg" alt="Phone UI 1" class="phone phone-one" />
+      <img src="images/L2.jpg" alt="Phone UI 2" class="phone phone-two" />
+    </div>
 
-  <div class="connection-right">
-    <h2>Where Every Click<br>Sparks a Connection!</h2>
-    <p>
-      A small act of kindness today can create a lifetime of impact for someone in need.
-      Give from the heart and change a life!
-    </p>
+    <div class="connection-right">
+      <h2>Where Every Click<br />Sparks a Connection!</h2>
+      <p>
+        A small act of kindness today can create a lifetime of impact for someone in need.
+        Give from the heart and change a life!
+      </p>
 
-    <div class="feature-list">
-      <div class="feature-item">
-        <span class="icon">🎬</span>
-        <div>
-          <strong>Short Videos & Reels</strong><br>
-          <small>Share engaging, bite-sized content that keeps everyone entertained.</small>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="icon">🎬</span>
+          <div>
+            <strong>Short Videos & Reels</strong>
+            <small>Share engaging, bite-sized content that keeps everyone entertained.</small>
+          </div>
         </div>
-      </div>
 
-      <div class="feature-item">
-        <span class="icon">🔔</span>
-        <div>
-          <strong>Smart Notifications</strong><br>
-          <small>Stay updated on what matters without the noise.</small>
+        <div class="feature-item">
+          <span class="icon">🔔</span>
+          <div>
+            <strong>Smart Notifications</strong>
+            <small>Stay updated on what matters without the noise.</small>
+          </div>
         </div>
-      </div>
 
-      <div class="feature-item">
-        <span class="icon">👥</span>
-        <div>
-          <strong>Interest-Based Communities</strong><br>
-          <small>Join groups and discussions that match your passion.</small>
+        <div class="feature-item">
+          <span class="icon">👥</span>
+          <div>
+            <strong>Interest-Based Communities</strong>
+            <small>Join groups and discussions that match your passion.</small>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 <!-- Installation Steps Section -->
 <section class="install-section">
   <h2>How to Install Our App</h2>
@@ -132,17 +137,20 @@
 </section>
 
 <!-- Donation Call to Action Section -->
-<section class="donate-section">
-  <div class="donate-content">
-    <h2>Be the Reason<br><span>Someone Smiles Today!</span></h2>
-    <p>Your generosity can change lives. Every donation brings hope, support, and a brighter future. Give today and make a difference!</p>
-    <button class="donate-btn">Donate Now</button>
-  </div>
-  <div class="donate-phones">
-    <img src="images/d1.jpg" alt="Donation Phone 1" class="donate-phone phone-front">
-    <img src="images/d2.jpg" alt="Donation Phone 2" class="donate-phone phone-back">
+<section class="donate-wrapper">
+  <div class="donate-section">
+    <div class="donate-content">
+      <h2>Be the Reason<br><span>Someone Smiles Today!</span></h2>
+      <p>Your generosity can change lives. Every donation brings hope, support, and a brighter future. Give today and make a difference!</p>
+      <button class="donate-btn">Donate Now</button>
+    </div>
+    <div class="donate-phones">
+      <img src="images/d1.jpg" alt="Donation Phone 1" class="donate-phone phone-front">
+      <img src="images/d2.jpg" alt="Donation Phone 2" class="donate-phone phone-back">
+    </div>
   </div>
 </section>
+
 <section class="testimonials-section">
   <h2 class="testimonial-title">What Our Users Say</h2>
 
@@ -154,7 +162,7 @@
         This platform changed the way I stay in touch with my friends and family. The interface is smooth, and I love how easy it is to share moments!
       </p>
       <div class="user-info">
-        <img src="images/user1.jpg" alt="User 1">
+        <img src="images/t1.jpg" alt="User 1">
         <div>
           <strong>Emily R</strong><br />
           <span>USA</span>
@@ -169,7 +177,7 @@
         Finally, a social network that understands what I need! The privacy features are a game-changer, and I feel safer sharing my life online.
       </p>
       <div class="user-info">
-        <img src="images/user2.jpg" alt="User 2">
+        <img src="images/t2.jpg" alt="User 2">
         <div>
           <strong>Amit K</strong><br />
           <span>India</span>
@@ -184,7 +192,7 @@
         I joined just to explore, but now I can't imagine my day without it. The real-time chat and engaging communities make every interaction special!
       </p>
       <div class="user-info">
-        <img src="images/user3.jpg" alt="User 3">
+        <img src="images/t3.jpg" alt="User 3">
         <div>
           <strong>Sophie M</strong><br />
           <span>UK</span>
@@ -199,7 +207,7 @@
         Running my small business has never been easier! This platform helped me connect with customers, promote my products, and grow my brand.
       </p>
       <div class="user-info">
-        <img src="images/user4.jpg" alt="User 4">
+        <img src="images/t4.jpg" alt="User 4">
         <div>
           <strong>Javier L</strong><br />
           <span>Spain</span>
@@ -214,7 +222,7 @@
         The perfect blend of fun and functionality! Whether I want to joke, share discoveries, or just catch up with friends, everything is right here!
       </p>
       <div class="user-info">
-        <img src="images/user5.jpg" alt="User 5">
+        <img src="images/t5.jpg" alt="User 5">
         <div>
           <strong>Lucas T</strong><br />
           <span>Brazil</span>
@@ -229,7 +237,7 @@
         I’ve tried many social platforms, but this one truly stands out! The experience feels real, and the connections feel solid, not just random likes.
       </p>
       <div class="user-info">
-        <img src="images/user6.jpg" alt="User 6">
+        <img src="images/t6.jpg" alt="User 6">
         <div>
           <strong>Nora S</strong><br />
           <span>Canada</span>
@@ -240,15 +248,17 @@
 
   <button class="see-more-btn">See More</button>
 </section>
-<section class="download-banner">
-  <div class="download-content">
-    <h2>Join the Fun – Download <br />MyBindle Now!</h2>
-    <button class="download-btn">Download Now</button>
-  </div>
-  <div class="download-image">
-    <img src="images/1st.jpg" alt="App Preview" />
+<section class="download-wrapper">
+  <div class="download-banner">
+    <div class="download-content">
+      <h2>Join the Fun – Download <br />MyBindle Now!</h2>
+      <button class="download-btn">Download Now</button>
+    </div>
+    <div class="download-image">
+      <img src="images/1st.jpg" alt="App Preview" />
+    </div>
   </div>
 </section>
-
+<script src="script.js"></script>
 </body>
 </html>
